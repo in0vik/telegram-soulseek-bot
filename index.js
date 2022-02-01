@@ -35,6 +35,10 @@ const sendMessage = (ctx, msg) => {
   }
 };
 
+const sendAudio = (ctx, audioUrl) => { 
+  ctx.telegram.sendAudio(ctx, audioUrl)
+}
+
 const basename = (filename) => {
   const split = filename.split("\\");
   return split[split.length - 1];
@@ -132,3 +136,4 @@ const main = async (soulseek) => {
 })().catch((err) => {
   console.error(err);
 });
+
