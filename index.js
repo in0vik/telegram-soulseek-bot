@@ -35,9 +35,9 @@ const sendMessage = (ctx, msg) => {
   }
 };
 
-const sendAudio = (ctx, audioUrl) => { 
-  ctx.telegram.sendAudio(ctx, audioUrl)
-}
+const sendAudio = (ctx, audioUrl) => {
+  ctx.telegram.sendAudio(ctx, audioUrl);
+};
 
 const basename = (filename) => {
   const split = filename.split("\\");
@@ -82,8 +82,8 @@ const retrieveFile = (soulseek, ctx, result, filename) => {
       }
       sendMessage(ctx, `Download of "${downloadPath}" completed!`);
       ctx.replyWithAudio({
-        source: downloadPath;
-      })
+        source: downloadPath,
+      });
     }
   );
 };
@@ -138,4 +138,3 @@ const main = async (soulseek) => {
 })().catch((err) => {
   console.error(err);
 });
-
