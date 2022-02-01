@@ -81,7 +81,9 @@ const retrieveFile = (soulseek, ctx, result, filename) => {
         handleErr(ctx, err);
       }
       sendMessage(ctx, `Download of "${downloadPath}" completed!`);
-      sendAudio(ctx, downloadPath);
+      ctx.replyWithAudio({
+        source: downloadPath;
+      })
     }
   );
 };
